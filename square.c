@@ -1,4 +1,6 @@
 //Функции для integer
+#pragma GCC diagnostic ignored "-Wimplicit-function-declaration"
+#pragma GCC diagnostic ignored "-Wbuiltin-declaration-mismatch"
 int squaring(int num)
 {
     return (num*num);

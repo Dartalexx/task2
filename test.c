@@ -12,7 +12,8 @@ int main()
 {
 
     int num1 = 16;
-    printf("Int\nNumber is %d\nSquare is %d\nRoot is %.2f\n", num1, squaring(num1), square_root(num1));
+    printf("\n\nTest program:\n");
+    printf("\nInt\nNumber is %d\nSquare is %d\nRoot is %.2f\n", num1, squaring(num1), square_root(num1));
     double num2 = 15.2;
     printf("\nFloat\nNumber is %.2f\nSquare is %.2f\nRoot is %.2f\n", num2, double_squaring(num2), double_square_root(num2));
     float num3 = 5.732;
