@@ -1,15 +1,14 @@
-all: staticLib test.o
-	gcc test.o -L. -lsquare -lm -o prog
+all: dynamicLib test.o
+	gcc test.o -L. -lsquaredyn -lm -o prog
 
-staticLib: square.o
-	ar rc libsquare.a square.o
-	ranlib libsquare.a
+dynamicLib: square.o
+	gcc -shared -o libsquaredyn.so square.o
 
 test.o: test.c
 	gcc -c test.c
 
 square.o: square.c
-	gcc -c square.c
+	gcc -fPIC -c square.c
 
 clean: 
-	rm prog *.o *.a
+	rm prog *.o *.so
